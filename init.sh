@@ -575,6 +575,9 @@ function init_hal_sensors()
                 setkeycodes 0xa7 1
                 setkeycodes 0xe3 142
                 ;;
+            *Hi10*plus*)
+                set_property ro.iio.accel.y.opt_scale -1
+                ;;
             *Aspire1*25*)
                 modprobe lis3lv02d_i2c
                 echo -n "enabled" > /sys/class/thermal/thermal_zone0/mode
